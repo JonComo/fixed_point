@@ -49,6 +49,8 @@ class Window(pyglet.window.Window):
         self.label = None
         self.texture_cache = None # used for rendering weight/grad matrices
         self.set_line_width(3.0)
+        pyglet.gl.glPointSize(2.0)
+	self.particle_batch = None
 
     def set_fps(self, fps=60):
         self.clock.set_fps_limit(fps)
